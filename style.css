@@ -1,0 +1,58 @@
+body {
+  height: 200vh;
+}
+
+/* 4. Escribe el código CSS necesario para pintar, entre paréntesis, dentro de cada elemento de la lista, el valor de su correspondiente data. */
+ul li::after {
+  content: "(" attr(data-value) ")";
+  padding-left: 5px;
+  letter-spacing: 1px;
+}
+
+/* 5. Escribe el código CSS necesario para formatear la lista en 3 filas: La primera con 3 celdas (25%, 60% y 15% de ancho respectivamente). La segunda con una única celda (100% de ancho). Y la tercera con 2 celdas que ocupen la mitad del ancho cada una.  */
+
+ul {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: block;
+  border: solid gray thin;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+ul li:nth-child(1) {
+  width: 25%;
+}
+
+ul li:nth-child(2) {
+  width: 60%;
+}
+
+ul li:nth-child(3) {
+  width: 15%;
+}
+
+ul li:nth-child(4) {
+  width: 100%;
+}
+
+ul li:nth-child(5) {
+  width: 50%;
+}
+ul li:nth-child(6) {
+  width: 50%;
+}
+
+/* 6. Escribe el código necesario para que todos los elementos H1 tengan tipografía OpenSans 18px y un sombreado inferior izquierdo de rgba(0,0,0,.7)  */
+h1 {
+  font-family: "Open Sans";
+  font-size: 18px;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.7);
+}
